@@ -1,0 +1,8 @@
+Config:
+stand|http://172.19.214.37/wps/myportal/app/fin
+login|testOperator
+password|testOperator
+browser|Chrome
+_etal postfix|Yes
+
+running from D:\Users\taglyamov\IdeaProjects\GradleProjectNew\

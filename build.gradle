@@ -1,0 +1,30 @@
+group 'testFK'
+
+apply plugin: 'java'
+//apply plugin: 'java-library-distribution'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.seleniumhq.selenium:selenium-java:3.6.0'
+    compile 'com.codeborne:selenide:4.8'
+    compile 'org.testng:testng:6.8'
+}
+
+//distZip.shouldRunAfter(build)
+
+//jar {
+//    // Keep jar clean:
+//    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
+//
+//    manifest {
+//        attributes 'Main-Class': 'RQ_20_0208_visibility_19',
+//                'Class-Path': configurations.runtime.files.collect { "lib/$it.name" }.join(' ')
+//    }
+//}
+
+test {
+    useTestNG()
+}
