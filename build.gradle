@@ -12,7 +12,7 @@ dependencies {
     compile 'com.codeborne:selenide:4.8'
     compile 'org.testng:testng:6.8'
 }
-
+/*
 distZip.shouldRunAfter(build)
 
 jar {
@@ -24,7 +24,7 @@ jar {
                 'Class-Path': configurations.runtime.files.collect { "lib/$it.name" }.join(' ')
     }
 }
-
+*/
 test {
     useTestNG()
 }
