@@ -12,13 +12,14 @@ public class RQ_20_0208_visibility_19 {
     @BeforeClass
     public void setUpBrowser() throws IOException {
         Browser browser = new Browser();
-        browser.setProperties();
-        browser.loginToClaster();
-        Navigation.transition("Кредитный калькулятор");
+        
     }
 
     @Test
     public void step03() {
+        browser.setProperties();
+        browser.loginToClaster();
+        Navigation.transition("Кредитный калькулятор");
         Buttons.commonButton("Вернуть значения по умолчанию");
         DropDownList.commonDropDownList("Запустить расчёт сценариев", "Да");
         assertTrue(Check.attributeText("Мораторий на досрочное погашение","Нет"));
