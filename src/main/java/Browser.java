@@ -47,10 +47,11 @@ public class Browser {
             System.setProperty("webdriver.chrome.driver", h + "chromedriver.exe");
             System.setProperty("selenide.browser", "Chrome");
         }
+        open("http://172.19.214.37/wps/myportal/app/fin");
     }
 
     public void loginToClaster(){
-        open("http://172.19.214.37/wps/myportal/app/fin");
+        
         $(By.id("userID")).setValue(login);
         $(By.id("password")).setValue(password).pressEnter();
         //$("[id*=sbtSberLogo]").click();// для кластерного
