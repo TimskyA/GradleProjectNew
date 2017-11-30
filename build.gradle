@@ -13,17 +13,17 @@ dependencies {
     compile 'org.testng:testng:6.8'
 }
 
-//distZip.shouldRunAfter(build)
+distZip.shouldRunAfter(build)
 
-//jar {
-//    // Keep jar clean:
-//    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
-//
-//    manifest {
-//        attributes 'Main-Class': 'RQ_20_0208_visibility_19',
-//                'Class-Path': configurations.runtime.files.collect { "lib/$it.name" }.join(' ')
-//    }
-//}
+jar {
+    // Keep jar clean:
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
+
+    manifest {
+        attributes 'Main-Class': 'RQ_20_0208_visibility_19',
+                'Class-Path': configurations.runtime.files.collect { "lib/$it.name" }.join(' ')
+    }
+}
 
 test {
     useTestNG()
