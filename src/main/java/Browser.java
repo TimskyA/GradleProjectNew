@@ -50,7 +50,7 @@ public class Browser {
     }
 
     public void loginToClaster(){
-        open(standUrl);
+        open("http://172.19.214.37/wps/myportal/app/fin");
         $(By.id("userID")).setValue(login);
         $(By.id("password")).setValue(password).pressEnter();
         //$("[id*=sbtSberLogo]").click();// для кластерного
