@@ -16,7 +16,7 @@ public class RQ_20_0208_visibility_19 {
     }
 
     @Test
-    public void step03() {
+    public void step03() throws IOException{
         Browser browser = new Browser();
         browser.setProperties();
         browser.loginToClaster();
