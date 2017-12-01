@@ -6,7 +6,7 @@
  import static org.testng.Assert.assertFalse;
  import static org.testng.Assert.assertTrue;
 
- //testID 3678
+ //testID 3678 ALM
 public class RQ_20_0208_visibility_19 {
 
     @BeforeClass
