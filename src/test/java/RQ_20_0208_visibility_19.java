@@ -6,7 +6,7 @@
  import static org.testng.Assert.assertFalse;
  import static org.testng.Assert.assertTrue;
 
- //testID 3678 ALM
+ //testID 3678
 public class RQ_20_0208_visibility_19 {
 
     @BeforeClass
@@ -14,7 +14,8 @@ public class RQ_20_0208_visibility_19 {
          Browser browser = new Browser();
         browser.setProperties();
         browser.loginToClaster();
-        Navigation.transition("Кредитный калькулятор");   
+        Navigation.transition("Кредитный калькулятор");
+        if(true) ;
     }
 
     @Test
