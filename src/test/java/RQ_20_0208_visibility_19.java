@@ -15,7 +15,6 @@ public class RQ_20_0208_visibility_19 {
         browser.setProperties();
         browser.loginToClaster();
         Navigation.transition("Кредитный калькулятор");
-        if(true) ;
     }
 
     @Test
