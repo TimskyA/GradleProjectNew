@@ -1,19 +1,22 @@
- import org.testng.annotations.BeforeClass;
- import org.testng.annotations.Test;
+ import org.testng.annotations.*;
+
  import java.io.IOException;
 
- import static org.testng.Assert.assertEquals;
  import static org.testng.Assert.assertFalse;
  import static org.testng.Assert.assertTrue;
 
  //testID 3678
 public class RQ_20_0208_visibility_19 {
 
+     @BeforeSuite
+     public void setUpBrowser() throws IOException {
+         Browser browser = new Browser();
+         browser.setProperties();
+         browser.loginToClaster();
+     }
+
     @BeforeClass
-    public void setUpBrowser() throws IOException {
-        Browser browser = new Browser();
-        browser.setProperties();
-        browser.loginToClaster();
+    public void navigate() {
         Navigation.transition("Кредитный калькулятор");
     }
 
