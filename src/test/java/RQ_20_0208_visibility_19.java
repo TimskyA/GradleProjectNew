@@ -11,7 +11,7 @@ public class RQ_20_0208_visibility_19 {
 
     @BeforeClass
     public void setUpBrowser() throws IOException {
-         Browser browser = new Browser();
+        Browser browser = new Browser();
         browser.setProperties();
         browser.loginToClaster();
         Navigation.transition("Кредитный калькулятор");
