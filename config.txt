@@ -1,4 +1,4 @@
-stand : http://172.19.214.37/wps/myportal/app/fin
+stand : http://172.19.214.37/wps/portal/
 login : testOperator
 password : testOperator
 browser : Chrome

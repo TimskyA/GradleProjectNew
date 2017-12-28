@@ -11,6 +11,9 @@ dependencies {
     compile 'org.seleniumhq.selenium:selenium-java:3.6.0'
     compile 'com.codeborne:selenide:4.8'
     compile 'org.testng:testng:6.8'
+    //compile 'org.apache.poi:poi:3.12'
+    compile 'org.apache.poi:poi-ooxml:3.12'
+    compile 'com.itextpdf:itextpdf:5.1.0'
 }
 
 //distZip.shouldRunAfter(build)
