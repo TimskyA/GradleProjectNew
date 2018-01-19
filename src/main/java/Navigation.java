@@ -15,9 +15,15 @@ public class Navigation {
             case "Интерполятор ставок":                 $(By.linkText("Калькуляторы")).hover();$(By.linkText("Интерполятор ставок")).click();break;
             case "Верификация внешних ставок":          $(By.linkText("Загрузка и верификация")).hover();$(By.linkText("Верификация внешних ставок")).click();break;
             case "Верификация внутренних ставок":       $(By.linkText("Загрузка и верификация")).hover();$(By.linkText("Верификация внутренних ставок")).click();break;
-            case "Загрузка ставок":                     $(By.linkText("Загрузка и верификация")).hover();$(By.linkText("Загрузка")).click();break;
+            case "Загрузка":                            $(By.linkText("Загрузка и верификация")).hover();$(By.linkText("Загрузка")).click();break;
+            case "Расписания":                          $(By.linkText("Управление")).hover();$(By.linkText("Расписания")).click();break;
             case "Календари":                           $(By.linkText("Управление")).hover();$(By.linkText("Календари")).click();break;
             case "Журнал":                              $(By.linkText("Управление")).hover();$(By.linkText("Журнал")).click();break;
+            case "Статистика":                          $(By.linkText("Управление")).hover();$(By.linkText("Статистика")).click();break;
+            case "Параметры внешних ставок":            $(By.linkText("Управление")).hover();$(By.linkText("Параметры внешних ставок")).click();break;
+            case "Валюты":                              $(By.linkText("Управление")).hover();$(By.linkText("Валюты")).click();break;
+            case "Экспорт расчётов":                   $(By.linkText("Администрирование")).hover();$(By.linkText("Экспорт расчётов")).click();break;
+            case "Импорт расчётов":                    $(By.linkText("Администрирование")).hover();$(By.linkText("Импорт расчётов")).click();break;
             //вкладки
             case "Расчеты":                             try {$(By.linkText("Расчеты")).click();}   catch(NoSuchElementException e){$$(By.className("sbtMainMenuItem")).findBy(Condition.exactText("Расчеты")).click();}break;
             case "Рыночные ставки / Курсы":             $(By.linkText("Рыночные ставки / Курсы")).click();break;

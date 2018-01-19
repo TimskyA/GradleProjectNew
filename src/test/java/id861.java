@@ -16,13 +16,6 @@ import static org.testng.Assert.assertTrue;
 public class id861 {//дописан
     private int before;
 
-    @BeforeSuite
-    public void setUpBrowser() throws IOException {
-        Browser browser = new Browser();
-        browser.setProperties();
-        browser.loginToClaster();
-    }
-
     @BeforeClass
     public void navigate() {
         Navigation.transition("Расчеты");

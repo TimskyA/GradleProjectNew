@@ -11,12 +11,6 @@ import static com.codeborne.selenide.Selenide.$$;
 import static org.testng.Assert.assertTrue;
 
 public class id955 {//дописан
-    @BeforeSuite
-    public void setUpBrowser() throws IOException {
-        Browser browser = new Browser();
-        browser.setProperties();
-        browser.loginToClaster();
-    }
 
     @BeforeClass
     public void navigate() {
@@ -75,5 +69,6 @@ public class id955 {//дописан
                                                                           " (Методология - Модели УКР ДР): model_UKR_DR@mail.ca.sbrf.ru\nВ экстренных случаях просьба обращаться к Сергею Шешкусу " +
                                                                           "(тел: 8(495) 957-59-32, вн: 19-179, Sheshkus-SV@mail.ca.sbrf.ru), - сотруднику, ответственному за методологическую " +
                                                                           "поддержку горячей линии model_UKR_DR@mail.ca.sbrf.ru");
+        Buttons.common("ОК (Сообщения системы)");
     }
 }

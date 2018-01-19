@@ -39,7 +39,7 @@ public class Browser {
         postfix = configParams.get("_etal postfix");
 
         System.out.println("\nrunning from " + h);
-        //задание пропов
+
         if (configParams.get("browser").equals("IE")) {
             System.setProperty("webdriver.ie.driver", h + "IEDriverServer.exe");
             System.setProperty("selenide.browser", "IE");
@@ -53,7 +53,7 @@ public class Browser {
         open(standUrl);
         $(By.id("userID")).setValue(login);
         $(By.id("password")).setValue(password).pressEnter();
-        $("[id*=sbtSberLogo]").click();//для кластерного
+        $("[id=sbtSberLogo]").click();//для кластерного
     }
 
     public void loginToClasterWith(String login,String password){
@@ -62,5 +62,4 @@ public class Browser {
         $(By.id("password")).setValue(password).pressEnter();
         $("[id*=sbtSberLogo]").click();//для кластерного
     }
-
 }

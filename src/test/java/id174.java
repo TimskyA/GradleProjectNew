@@ -11,12 +11,6 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 public class id174 {//дописан
-    @BeforeSuite
-    public void setUpBrowser() throws IOException {
-        Browser browser = new Browser();
-        browser.setProperties();
-        browser.loginToClaster();
-    }
 
     @BeforeClass
     public void navigate() {

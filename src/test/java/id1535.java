@@ -10,12 +10,6 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 public class id1535 {//дописан
-    @BeforeSuite
-    public void setUpBrowser() throws IOException {
-        Browser browser = new Browser();
-        browser.setProperties();
-        browser.loginToClaster();
-    }
 
     @BeforeClass
     public void navigate() {
@@ -50,7 +44,7 @@ public class id1535 {//дописан
     public void step06(){
         Navigation.transition("Расчеты");
         $(By.linkText(Regex.nameLastCalculation)).click();
-        assertFalse(Check.attributeVisible("Стрелка вниз"));
+        assertFalse(Check.attributeVisible("Стрелка вниз (карточка расчета)"));
     }
 
     @Test
@@ -71,7 +65,7 @@ public class id1535 {//дописан
         Buttons.common("ОК (Сообщения системы)");
         Navigation.transition("Расчеты");
         $(By.linkText(Regex.nameLastCalculation)).click();
-        assertFalse(Check.attributeVisible("Стрелка вниз"));
+        assertFalse(Check.attributeVisible("Стрелка вниз (карточка расчета)"));
     }
 
     @Test
@@ -91,6 +85,6 @@ public class id1535 {//дописан
         Buttons.common("ОК (Сообщения системы)");
         Navigation.transition("Расчеты");
         $(By.linkText(Regex.nameLastCalculation)).click();
-        assertFalse(Check.attributeVisible("Стрелка вниз"));
+        assertFalse(Check.attributeVisible("Стрелка вниз (карточка расчета)"));
     }
 }

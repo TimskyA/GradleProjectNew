@@ -19,10 +19,13 @@ public class Set {
 
     public static void field(String nameField,String value) {
         switch (nameField) {
+            //Рыночные ставки / Курсы
             //Кредитный калькулятор-расчёт
             //Кредитный калькулятор-табличные данные
             //Расчёты
             case "Идентификатор":                   for(char c:value.toCharArray()) $("[name*=paymentNumber]").sendKeys(String.valueOf(c));break;
+            //Материалы
+            case "Название":                        for(char c:value.toCharArray()) $("[name=materialName]").sendKeys(String.valueOf(c));break;
             //Управление-журнал
             case "Тип операции":                    for(char c:value.toCharArray()) $(By.id("dijit_form_FilteringSelect_0")).sendKeys(String.valueOf(c));break;
             case "Дата начала":                     for(char c:value.toCharArray()) $(By.id("dijit_form_DateTextBox_0")).sendKeys(String.valueOf(c));break;

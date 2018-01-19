@@ -7,6 +7,7 @@ import java.io.IOException;
 import static org.testng.Assert.assertTrue;
 
 public class id6 {//дописан
+
     @BeforeSuite
     public void setUpBrowser() throws IOException {
         Browser browser = new Browser();

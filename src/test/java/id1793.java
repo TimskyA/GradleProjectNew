@@ -10,12 +10,6 @@ import static com.codeborne.selenide.Selenide.$;
 import static org.testng.Assert.assertTrue;
 
 public class id1793 {//дописан по html отчёту
-    @BeforeSuite
-    public void setUpBrowser() throws IOException {
-        Browser browser = new Browser();
-        browser.setProperties();
-        browser.loginToClaster();
-    }
 
     @BeforeClass
     public void navigate() {

@@ -28,19 +28,26 @@ public class DropDownList {
             case "Рассчитываемая ставка":                                                           $("[id*=CC_CALC_PER_wrapped]").click();break;
             case "Срочность векселей":                                                              $("[id*=CC_DIFF_VEKS_TERM_wrapped]").click();break;
             case "Наличие внутренней платы за предыдущее изменение условий по сделке":              $("[id*=CC_PREVCNG_IPAY_FLAG_wrapped]").click();break;
-            //Расчёт
+            //Карточка расчёта
             case "Действия":                                                                        $(By.id("dijit_form_DropDownButton_0_label")).click();break;
+            //Карточка материала
+            case "Действия (карточка материала)":                                                   $(By.id("dijit_form_DropDownButton_1_label")).click();break;
             default:                                                                                System.out.println("Такого списка нет");
+
         }
         $$("[id*=dijit_MenuItem_]").findBy(Condition.exactText(value)).click();//непосредственно выбор значения из списка
     }
 
     //выпадающие списки журнал-календарь
-    public static void calendar(String list, String value) {
+    public static void alternative(String list, String value) {
         SelenideElement listElement = null;
         switch (list){
-            case "Месяц":   listElement=$("[id*=currentMonth]");break;
-            case "Год":     listElement=$("[id*=currentYear]");break;
+            //Материалы
+            case "Статус":      listElement=$("[name=selectedStatusId]");break;
+            //Календари
+            case "Месяц":       listElement=$("[id*=currentMonth]");break;
+            case "Год":         listElement=$("[id*=currentYear]");break;
+
         }
         listElement.$$(By.tagName("option")).findBy(Condition.exactText(value)).click();
     }

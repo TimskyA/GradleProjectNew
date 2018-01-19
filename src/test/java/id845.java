@@ -17,13 +17,6 @@ import static org.testng.Assert.assertTrue;
 
 public class id845 {//дописан (перед запуском этого теста убедитесь что в папке "загрузки" нет data.csv файла)
 
-    @BeforeSuite
-    public void setUpBrowser() throws IOException {
-        Browser browser = new Browser();
-        browser.setProperties();
-        browser.loginToClaster();
-    }
-
     @BeforeClass
     public void navigate() {
         Navigation.transition("Журнал");

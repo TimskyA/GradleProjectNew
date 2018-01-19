@@ -8,13 +8,6 @@ import org.testng.annotations.*;
  //testID 3678
 public class RQ_20_0208_visibility_19 { //дописан, но не актуален
 
-     @BeforeSuite
-     public void setUpBrowser() throws IOException {
-         Browser browser = new Browser();
-         browser.setProperties();
-         browser.loginToClaster();
-     }
-
     @BeforeClass
     public void navigate() {
         Navigation.transition("Кредитный калькулятор");

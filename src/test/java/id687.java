@@ -1,7 +1,5 @@
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -12,20 +10,11 @@ import static com.codeborne.selenide.Selenide.$;
 import static org.testng.Assert.*;
 
 public class id687 {//дописан
-    @BeforeSuite
-    public void setUpBrowser() throws IOException {
-        Browser browser = new Browser();
-        browser.setProperties();
-        browser.loginToClaster();
-    }
-
-    @BeforeClass
-    public void navigate() {Navigation.transition("Календари");}
-
 
     @Test
     public void step03() {
-        $(By.linkText("RUS")).click();
+        Navigation.transition("Календари");
+//        $(By.linkText("RUS")).click(); //при запуске отдельно от сьюта снять комментарий со строки
         for(int i=0;i<27;i++)
             $(By.id("dayViewList"+i+".holiday1")).shouldBe(Condition.disabled);//если хотя бы 1 элемент редактируем свалится с селенидовским исключением
         $(By.name("buttonEditOn")).shouldBe(Condition.visible);
@@ -36,8 +25,8 @@ public class id687 {//дописан
 
     @Test
     public void step04() {
-        DropDownList.calendar("Месяц", "Май");
-        DropDownList.calendar("Год", "2013");
+        DropDownList.alternative("Месяц", "Май");
+        DropDownList.alternative("Год", "2013");
         Buttons.common("Режим редактирования");
         assertEquals($(By.id("dayViewList0.holiday1")).getValue(), "true");
         assertEquals($(By.id("dayViewList1.holiday1")).getValue(), "true");
@@ -48,8 +37,8 @@ public class id687 {//дописан
 
     @Test
     public void step05() {
-        DropDownList.calendar("Месяц", "Январь");
-        DropDownList.calendar("Год", "2010");
+        DropDownList.alternative("Месяц", "Январь");
+        DropDownList.alternative("Год", "2010");
         assertEquals($(By.id("dayViewList1.holiday1")).getValue(), "true");
         assertEquals($(By.id("dayViewList2.holiday1")).getValue(), "true");
         assertEquals($(By.id("dayViewList8.holiday1")).getValue(), "true");
@@ -64,8 +53,8 @@ public class id687 {//дописан
 
     @Test
     public void step06() {
-        DropDownList.calendar("Месяц","Февраль");
-        DropDownList.calendar("Год","2012");
+        DropDownList.alternative("Месяц","Февраль");
+        DropDownList.alternative("Год","2012");
         assertFalse($(By.id("dayViewList30.holiday1")).is(Condition.exist));
         assertFalse($(By.id("dayViewList29.holiday1")).is(Condition.exist));
         assertTrue($(By.id("dayViewList28.holiday1")).is(Condition.exist));
@@ -73,8 +62,8 @@ public class id687 {//дописан
 
     @Test
     public void step07() {
-        DropDownList.calendar("Месяц","Февраль");
-        DropDownList.calendar("Год","2013");
+        DropDownList.alternative("Месяц","Февраль");
+        DropDownList.alternative("Год","2013");
         assertFalse($(By.id("dayViewList29.holiday1")).is(Condition.exist));
         assertFalse($(By.id("dayViewList28.holiday1")).is(Condition.exist));
         assertTrue($(By.id("dayViewList27.holiday1")).is(Condition.exist));
